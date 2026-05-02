@@ -1,0 +1,20 @@
+{
+  "name": "daily_coding_practice",
+  "version": "1.0.0",
+  "description": "Unified Coding Practice Dashboard",
+  "private": true,
+  "scripts": {
+    "dashboard": "npm run dev --prefix dashboard -- --force",
+    "server": "node server.js",
+    "install-all": "npm install && npm install --prefix dashboard",
+    "start": "concurrently \"npm run dashboard\" \"npm run server\"",
+    "build": "npm run build --prefix dashboard"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
